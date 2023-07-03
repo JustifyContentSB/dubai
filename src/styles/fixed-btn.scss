@@ -1,0 +1,28 @@
+@import 'partials';
+
+.fixed-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1000;
+    transition: all .4s ease;
+
+    @media screen and (min-width: 1200px) {
+        &.is-active {
+            right: 50%;
+            transform: translate(50%);
+        }
+    }
+
+    &:hover {
+      &::before {
+          color: $white;
+          background: $primary;
+      }
+    }
+
+    @include ms(md) {
+        bottom: 20px;
+        right: 20px;
+    }
+}

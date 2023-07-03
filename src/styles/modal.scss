@@ -1,0 +1,139 @@
+@import 'partials';
+
+.modal {
+    display: none;
+    width: 600px;
+    max-width: 100%;
+    border-radius: $radius;
+    overflow: auto;
+
+    &--order {
+        width: 100%;
+        max-width: 1920px;
+        padding: 58px 50px 210px;
+        background: #fff;
+        border-radius: 0;
+
+        .modal {
+            &__title {
+                padding: 0;
+                font-size: 64px;
+                color: #333;
+            }
+        }
+    }
+
+    @include shadow();
+
+    @include mo(xs) {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        padding: 0;
+        font-size: 32px;
+        font-weight: bold;
+
+        @include mo(xs) {
+            font-size: 24px;
+            padding-right: 42px;
+        }
+    }
+
+    &__top {
+        margin-bottom: 42px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &-right {
+            position: relative;
+            top: 15px;
+        }
+    }
+
+    &__lead {
+        max-width: 548px;
+        font-size: 24px;
+        line-height: 128%;
+        font-weight: 400;
+    }
+
+    &__footer {
+        margin-top: 16px;
+    }
+
+    &__content {
+        max-width: 1200px;
+    }
+
+    .form {
+        &__box {
+            &--slim {
+                max-width: 707px;
+            }
+        }
+    }
+
+    @include ms(xxl) {
+        &__title {
+            .modal--order & {
+                font-size: 54px;
+            }
+        }
+    }
+
+    @include ms(xl) {
+        &__logo {
+            width: 200px;
+        }
+
+        &__title {
+            .modal--order & {
+                font-size: 44px;
+            }
+        }
+
+        &__lead {
+            font-size: 22px;
+        }
+
+        &__top {
+            margin-bottom: 40px;
+        }
+    }
+
+    @include ms(lg) {
+        &__top {
+            flex-direction: column;
+
+            &-right {
+                margin-bottom: 40px;
+                order: -1;
+            }
+        }
+
+        &__title {
+            .modal--order & {
+                margin-bottom: 18px;
+                font-size: 38px;
+            }
+        }
+
+        &__lead {
+            font-size: 18px;
+        }
+    }
+
+    @include ms(md) {
+        &--order {
+            padding: 30px;
+        }
+
+        &__top {
+            margin-bottom: 30px;
+        }
+    }
+}

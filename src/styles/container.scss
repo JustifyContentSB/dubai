@@ -1,0 +1,7 @@
+@import 'partials';
+
+.container {
+    @include ms(sm) {
+        padding: 0 10px;
+    }
+}

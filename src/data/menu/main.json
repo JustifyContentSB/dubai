@@ -1,0 +1,17 @@
+[{
+  "id": 1,
+  "title": "О нас",
+  "href": "#advantages"
+}, {
+  "id": 2,
+  "title": "Услуги",
+  "href": "#job"
+}, {
+  "id": 3,
+  "title": "Наши работы",
+  "href": "#cases"
+}, {
+  "id": 4,
+  "title": "Контакты",
+  "href": "#team"
+}]

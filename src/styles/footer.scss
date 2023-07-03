@@ -1,0 +1,336 @@
+@import 'partials';
+
+.footer {
+    background: #F2F6FC;
+    color: $dark;
+
+    &__top {
+        padding-top: 50px;
+        padding-bottom: 12px;
+        display: grid;
+        grid-template-columns: 268px 3fr auto;
+    }
+
+    &__logo {
+        display: inline-block;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 2;
+        grid-column-end: 2;
+    }
+
+    &__nav {
+        .menu {
+            &__list {
+                justify-content: center;
+            }
+
+            &__item {
+                a {
+                    color: $dark;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &__feedback {
+        display: flex;
+        flex-direction: column;
+        grid-row-start: 1;
+        grid-column-start: 5;
+        grid-row-end: 3;
+        grid-column-end: 6;
+
+        &-top {
+            margin-bottom: 10px;
+        }
+
+        &-title {
+            margin-bottom: 0;
+            color: $primary;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        &-lines {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 5px;
+
+            span {
+                height: 3px;
+                background: $blue;
+
+                &.footer__feedback-red {
+                    background: #ED2D24;
+                }
+            }
+        }
+
+        &-time {
+            margin-bottom: 22px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        &-tel {
+            white-space: nowrap;
+            font-size: 32px;
+            font-weight: 600;
+            color: $dark;
+        }
+
+        &-email {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        &-contacts {
+            & > * {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__info {
+        font-size: 16px;
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 2;
+
+        a {
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        grid-row-start: 2;
+        grid-column-start: 2;
+        grid-row-end: 3;
+        grid-column-end: 5;
+
+        &-item {
+            margin-right: 38px;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__bottom {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-left {
+            padding-top: 4px;
+        }
+    }
+
+    &__company {
+        margin: 0;
+        padding-left: 18px;
+        position: relative;
+        font-size: 16px;
+
+        span {
+            font-size: 28px;
+            position: absolute;
+            left: 0;
+            top: 58%;
+            transform: translateY(-50%);
+            vertical-align: middle;
+        }
+    }
+
+    &__docs {
+        display: flex;
+
+        li {
+            &:not(:last-child) {
+                margin-right: 11px;
+
+                &::after {
+                    content: '|';
+                    margin-left: 11px;
+                }
+            }
+        }
+
+        a {
+            font-size: 16px;
+            line-height: 100%;
+            color: $dark;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @include ms(xxl) {
+        &__top {
+            grid-template-columns: repeat(2, auto);
+            grid-gap: 20px;
+        }
+
+        &__logo,
+        &__nav,
+        &__feedback,
+        &__info,
+        &__links {
+            grid-row-start: auto;
+            grid-row-end: auto;
+            grid-column-start: auto;
+            grid-column-end: auto;
+        }
+
+        &__info {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        &__logo {
+            width: fit-content;
+        }
+
+        &__feedback {
+            width: fit-content;
+        }
+    }
+
+    @include ms(xl) {
+        &__bottom {
+            flex-direction: column;
+            align-items: center;
+
+            &-left {
+                order: 1;
+            }
+
+            &-right {
+                margin-bottom: 26px;
+            }
+        }
+    }
+
+    @include ms(lg) {
+        &__top {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        &__info {
+            grid-row-start: auto;
+            grid-row-end: auto;
+            grid-column-start: auto;
+            grid-column-end: auto;
+        }
+
+        &__docs {
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 11px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include ms(md) {
+        &__nav {
+            .menu {
+                &__list {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                &__item {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &__links {
+            flex-direction: column;
+            align-items: center;
+
+            &-item {
+                margin-right: 0;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @include ms(sm) {
+        &__top {
+            padding-bottom: 20px;
+        }
+
+        &__logo {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        &__feedback {
+            margin-bottom: 10px;
+        }
+
+        &__info {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        &__docs {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__bottom {
+            &-right {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+

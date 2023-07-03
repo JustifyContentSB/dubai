@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "Чекотило Андрей",
+        "photo": "images/team/team-01.png",
+        "email": "info@relevant.ru",
+        "post": "Director"
+    }, {
+        "id": 2,
+        "name": "Даутов Антон",
+        "photo": "images/team/team-02.png",
+        "email": "info@relevant.ru",
+        "post": "Commercial Director"
+    }, {
+        "id": 3,
+        "name": "Кожин Никита",
+        "email": "nikita@relevant.ru",
+        "photo": "images/team/team-03.png",
+        "post": "Project Director"
+    }, {
+        "id": 4,
+        "name": "Илья Сидорин",
+        "photo": "images/team/team-04.png",
+        "email": "seo@relevant.ru",
+        "post": "Head of SEO department"
+    }, {
+        "id": 5,
+        "name": "Семенова Людмила",
+        "photo": "images/team/team-05.png",
+        "email": "semenova@relevant.ru",
+        "post": "Head of Department Content Marketing"
+    }, {
+        "id": 6,
+        "name": "Сеснев Александр",
+        "photo": "images/team/team-06.png",
+        "email": "sesnev@relevant.ru",
+        "post": "Project manager"
+    }, {
+        "id": 7,
+        "name": "Цибер Ирина",
+        "photo": "images/team/team-07.png",
+        "email": "i.zieber@relevant.ru",
+        "post": "Project manager"
+    }, {
+        "id": 8,
+        "name": "Самуткина Анна",
+        "photo": "images/team/team-08.png",
+        "email": "anna@relevant.ru",
+        "post": "Project manager"
+    }, {
+        "id": 9,
+        "name": "Усенко Ольга",
+        "photo": "images/team/team-09.png",
+        "email": "olga@relevant.ru",
+        "post": "Project manager"
+    }
+]

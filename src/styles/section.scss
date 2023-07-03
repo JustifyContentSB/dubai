@@ -1,0 +1,70 @@
+@import 'partials';
+
+.section {
+    padding: 40px 0;
+
+    &__header {
+        margin-bottom: 30px;
+
+        &--secondary {
+            margin-bottom: 60px;
+        }
+
+        & > * {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: 48px;
+        line-height: 120%;
+        font-weight: 700;
+        color: $dark;
+    }
+
+    &__lead {
+        width: 100%;
+        max-width: 1080px;
+    }
+
+    @include ms(xl) {
+        padding: 30px 0;
+
+        &__title {
+            font-size: 40px;
+        }
+    }
+
+    @include ms(lg) {
+        &__title {
+            font-size: 36px;
+        }
+    }
+
+    @include ms(md) {
+        &__header {
+            &--secondary {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+    }
+
+    @include ms(sm) {
+        &__header {
+            &--secondary {
+                margin-bottom: 24px;
+            }
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+    }
+}

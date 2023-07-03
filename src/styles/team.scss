@@ -1,0 +1,126 @@
+@import 'partials';
+
+.team {
+    &__list {
+        width: 100%;
+        max-width: 1660px;
+        margin-bottom: 18px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 40px 20px;
+    }
+
+    &__item {
+        max-width: 350px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        width: 100px;
+        min-width: 100px;
+        margin-right: 25px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        color: $dark;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__name {
+        margin: 0;
+        font-size: 20px;
+        line-height: 120%;
+        font-weight: 600;
+    }
+
+    &__email {
+        margin-bottom: 6px;
+        white-space: nowrap;
+        font-size: 18px;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    &__post {
+        font-size: 18px;
+        line-height: 120%;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 1600px) {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @include ms(xl) {
+        &__list {
+            margin-bottom: 30px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include ms(md) {
+        &__list {
+            grid-template-columns: 1fr;
+            grid-gap: 42px;
+        }
+    }
+
+    @include ms(sm) {
+        &__list {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.section {
+    &--team {
+        .section {
+            &__header {
+                margin-bottom: 60px;
+
+                @include ms(md) {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+
+        @include ms(sm) {
+            padding-bottom: 16px;
+        }
+    }
+}
+
+// .section--team {
+//     transform: translateX(80px);
+//     transition: all 1s ease-in-out;
+
+//     &.animated {
+//         transform: translateX(0);
+//     }
+// }

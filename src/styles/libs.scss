@@ -1,0 +1,38 @@
+@import 'partials';
+
+.fancybox {
+    &__slide {
+        padding: 0  ;
+    }
+
+    &__content {
+        & > .carousel__button.is-close {
+            width: 36px;
+            height: 36px;
+            position: fixed;
+            top: 20px;
+            right: 48px;
+            color: $blue;
+
+            svg {
+                width: 32px;
+                height: 32px;
+                filter: none;
+            }
+
+            @include ms(lg) {
+                right: 30px;
+            }
+
+            @include ms(sm) {
+                top: 16px;
+                right: 20px;
+
+                svg {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+    }
+}

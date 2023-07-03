@@ -1,0 +1,124 @@
+@import 'partials';
+
+.job {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 24px 50px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        color: #E72C23;
+        font-size: 30px;
+        line-height: 100%;
+        font-weight: 600;
+    }
+
+    &__item {
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+
+        &:nth-child(2n) {
+            .job {
+                &__title {
+                    color: #0F4CE9;
+                }
+            }
+        }
+
+        &:nth-child(3n) {
+            .job {
+                &__title {
+                    color: #FFB51F;
+                }
+            }
+        }
+
+        &:nth-child(4n) {
+            .job {
+                &__title {
+                    color: #7E50D3;
+                }
+            }
+        }
+
+        &:nth-child(5n) {
+            .job {
+                &__title {
+                    color: #3EB020;
+                }
+            }
+        }
+
+        &:nth-child(6n) {
+            .job {
+                &__title {
+                    color: #20C3E8;
+                }
+            }
+        }
+    }
+
+    &__text {
+        max-width: 360px;
+        line-height: 140%;
+    }
+
+    @media screen and (max-width: 1600px) {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+        }
+    }
+
+    @include ms(xxl) {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__text {
+            max-width: 100%;
+        }
+    }
+
+    @include ms(lg) {
+        &__list {
+            grid-template-columns: 1fr;
+            grid-gap: 50px;
+        }
+
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include ms(md) {
+        &__title {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+    }
+
+    @include ms(sm) {
+        &__title {
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+    }
+}
+
+.section {
+    &.section--job {
+        .section {
+            &__header {
+                margin-bottom: 66px;
+
+                @include ms(xl) {
+                    margin-bottom: 55px;
+                }
+            }
+        }
+    }
+}

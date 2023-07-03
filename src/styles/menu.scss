@@ -1,0 +1,55 @@
+@import 'partials';
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            padding: 10px 0;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            text-align: center;
+            color: #fff;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                bottom: 0;
+                left: auto;
+                right: 0;
+                height: 2px;
+                background: $blue;
+                transition: width $transition-duration ease;
+            }
+
+            &:hover,
+            &:focus {
+                &::after {
+                    width: 100%;
+                    left: 0;
+                    right: auto;
+                }
+            }
+
+            &.is-active {
+                &::after {
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

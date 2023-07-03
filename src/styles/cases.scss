@@ -1,0 +1,509 @@
+@import 'partials';
+
+.cases {
+    color: $dark;
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    &__box {
+        margin-bottom: 57px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__header {
+        margin-bottom: 30px;
+    }
+
+    &__grid {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        margin-top: 30px;
+        padding: 0 50px 34px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+    }
+
+    &__pic {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    &__name {
+        display: block;
+        margin-bottom: 40px;
+        font-size: 24px;
+        line-height: 110%;
+        font-weight: 600;
+        text-decoration-line: underline;
+        text-decoration-thickness: 1px;
+        color: $dark;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__images {
+        height: 225px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+
+        &-fish {
+            position: relative;
+            z-index: 1;
+        }
+
+        &-monitor {
+            margin-top: 28px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &-gloves {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &-wheel {
+            margin-top: -30px;
+        }
+
+        &-bycicle {
+            margin-top: -30px;
+            margin-left: 10px;
+        }
+
+        &-hammer {
+            position: relative;
+            left: 60px;
+        }
+
+        &-pliers {
+            position: relative;
+            left: -20px;
+            top: 10px;
+        }
+
+        &-roof {
+            margin-left: auto;
+        }
+
+        &-table {
+            &__01 {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            &__02 {
+                position: absolute;
+                right: 0;
+                bottom: -120px;
+            }
+        }
+    }
+
+    &__cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.80);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+
+        &:hover {
+            display: flex;
+        }
+
+        .btn {
+            margin: auto;
+            padding: 28px 65px;
+            font-size: 24px;
+            border-radius: 50px;
+            background: #D9D9D9;
+
+            &:hover,
+            &:focus {
+                color: inherit;
+            }
+        }
+
+        .cases__name:hover ~ & {
+            display: flex;
+        }
+    }
+
+    &__bottom {
+        margin-top: auto;
+        display: flex;
+
+        .btn {
+            margin: 0;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__item {
+        background: #CFDBED;
+        color: $dark;
+        overflow: hidden;
+        position: relative;
+
+        &--green {
+            background: rgba(#38D740, 0.1);
+        }
+
+        &--pink {
+            background: rgba(#F04E23, 0.1);
+        }
+
+        &--orange {
+            background: rgba(#FFA011, 0.1);
+        }
+
+        &--azure {
+            background: #F2F6FC;
+        }
+
+        &--bright {
+            background: rgba(#0D2C73, 0.1);
+        }
+
+        &--light {
+            background: #F8F9FB;
+        }
+
+        &--blue {
+            background: #E5F3FF;
+        }
+
+        &--white {
+            background: #F8F9FB;
+        }
+
+        &--velomania {
+            .cases {
+                &__info {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &--ckb {
+            .cases {
+                &__images {
+                    height: 360px;
+                    justify-content: center;
+                }
+
+                &__info {
+                    margin-top: -20px;
+                }
+            }
+        }
+
+        &--russia {
+            .cases {
+                &__images {
+                    justify-content: center;
+                }
+
+                &__info {
+                    margin-top: -20px;
+                }
+            }
+        }
+
+        &--pansionatov {
+            .cases {
+                &__images {
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        &--nda {
+            .cases {
+                &__name {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &--lowrance {
+            .cases {
+                &__pic {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &--remonstr {
+            .cases {
+                &__info {
+                    margin-top: 15px;
+                }
+
+                &__pic {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &--tehno {
+            .cases {
+                &__info {
+                    margin-top: 42px;
+                }
+            }
+        }
+
+        &--bright {
+            .cases {
+                &__info {
+                    margin-top: 28px;
+                }
+            }
+        }
+
+        &--russia {
+            .cases {
+                &__images {
+                    height: 260px;
+                }
+            }
+        }
+
+        &--pansionatov {
+            .cases {
+                &__info {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        &--white {
+            .cases {
+                &__info {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1600px) {
+        &__grid {
+            &.grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+
+    @include ms(lg) {
+        &__grid.grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @include ms(md) {
+        &__header {
+            margin-bottom: 22px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__info {
+            padding: 0 10px 42px;
+        }
+
+        &__images {
+            &-fish {
+                width: 200px;
+            }
+
+            &-monitor {
+                width: 260px;
+                margin-top: 10px;
+                margin-right: -20px;
+            }
+
+            &-bycicle {
+                width: 310px;
+                margin-top: 0;
+                position: absolute;
+                top: 60px;
+                left: 50px;
+            }
+
+            &-hammer {
+                top: 20px;
+                left: 0;
+            }
+
+            &-pliers {
+                top: 84px;
+                left: -170px;
+                z-index: 1;
+            }
+
+            &-gloves {
+                width: 200px;
+                top: 96px;
+            }
+
+            &-helmet {
+                width: 120px;
+                align-self: flex-end;
+            }
+
+            &-card {
+                width: 273px;
+            }
+        }
+
+        &__item {
+            &--velomania {
+                .cases {
+                    &__info {
+                        margin-top: 60px;
+                    }
+
+                    &__pic {
+                        width: 220px;
+                    }
+                }
+            }
+
+            &--remonstr {
+                .cases {
+                    &__pic {
+                        width: 220px;
+                    }
+
+                    &__info {
+                        margin-top: 60px;
+                    }
+                }
+            }
+
+            &--ckb {
+                .cases {
+                    &__images {
+                        height: 312px;
+                    }
+                }
+            }
+
+            &--tehno {
+                .cases {
+                    &__pic {
+                        width: 272px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include ms(sm) {
+        &__images {
+            &-table {
+                &__01 {
+                    width: 230px;
+                }
+
+                &__02 {
+                    width: 200px;
+                    bottom: -40px;
+                }
+            }
+
+            &-roof {
+                width: 360px;
+                height: auto;
+            }
+
+            &-join {
+                width: 120px;
+            }
+
+            &-gallery {
+                width: 300px;
+            }
+
+            &-grandma {
+                width: 250px;
+            }
+
+            &-table {
+                &__03 {
+                    width: 220px;
+                    transform: translateY(-100px);
+
+                    &.animated {
+                        transform: translateY(-30px);
+                    }
+                }
+            }
+        }
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+}
+
+.section {
+    &--cases {
+        color: $dark;
+
+        @include ms(md) {
+            .section {
+                &__header {
+                    &--secondary {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

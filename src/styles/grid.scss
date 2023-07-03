@@ -1,0 +1,15 @@
+@import 'partials';
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 18px;
+
+    @include ms(xl) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include ms(md) {
+        grid-template-columns: 1fr;
+    }
+}

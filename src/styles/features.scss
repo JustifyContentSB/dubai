@@ -1,0 +1,134 @@
+@import 'partials';
+
+.features {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        counter-reset: num;
+    }
+
+    &__item {
+        width: 460px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        padding: 30px 30px 38px 30px;
+        background: #F8F8F8;
+        border-radius: 20px;
+        font-size: 24px;
+        line-height: 120%;
+        position: relative;
+
+        &::before {
+            content: '0' counter(num) '';
+            counter-increment: num;
+            display: inline-block;
+            position: absolute;
+            top: 37px;
+            right: 27px;
+            width: 50px;
+            color: #D9D9D9;
+            text-align: center;
+            font-size: 28px;
+            line-height: 120%;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__top {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__year {
+        margin: 0;
+        margin-right: 24px;
+        color: $blue;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 110%;
+        position: relative;
+
+        .features__item:not(:first-child) & {
+            &::after {
+                content: '+';
+                margin-left: 2px;
+            }
+        }
+    }
+
+    &__description {
+        max-width: 160px;
+        margin: 0;
+    }
+
+    &__text {
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1500px) {
+        &__item {
+            width: calc(33.33% - 20px);
+            padding: 22px;
+            font-size: 20px;
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+
+        &__year {
+            font-size: 56px;
+        }
+    }
+
+    @media screen and (max-width: 1399px) {
+        &__item {
+            width: calc(33.33% - 16px);
+            margin-right: 24px;
+            font-size: 18px;
+
+            &::before {
+                right: 6px;
+            }
+        }
+
+        &__year {
+            margin-right: 16px;
+            font-size: 50px;
+        }
+    }
+
+    @include ms(xl) {
+        &__list {
+            flex-direction: column;
+        }
+
+        &__item {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        &__year {
+            margin-right: 24px;
+            font-size: 64px;
+        }
+    }
+
+    @include ms(sm) {
+        &__item {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

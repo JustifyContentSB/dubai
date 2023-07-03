@@ -1,0 +1,26 @@
+<!-- Team -->
+<section class="section section--team" id="team">
+    <div class="section__wrapper container">
+        <div class="section__header">
+            <h2 class="section__title">Наша команда</h2>
+            <p class="section__lead">Агентство “Relevant” было основано в 2009 году, и с тех пор компания выросла до 35 штатных специалистов в области интернет-маркетинга.</p>
+        </div>
+        <div class="section__content">
+            <div class="team">
+                <div class="team__inner">
+                    <ul class="team__list">
+                        @@loop('items/team.html', '/data/team.json')
+                        <li class="team__item" data-animation>
+                            <div class="team__img">
+                                <img src="images/icons/empty.gif" data-src="images/team/team-10.png" alt="специалист" width="100" height="100">
+                            </div>
+                            <div class="team__info">
+                                <p>+ 30 специалистов</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

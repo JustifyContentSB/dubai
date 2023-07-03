@@ -1,0 +1,249 @@
+@import 'partials';
+
+@for $i from 1 through 10 {
+    .job__item:nth-child(#{$i}n) {
+        transition-duration: #{$i * 0.15}s;
+    }
+}
+
+.job {
+    &__item {
+        transition-property: all;
+        transition-timing-function: linear;
+        transform: translateY(80px);
+        opacity: 0;
+
+        &.animated {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+@for $i from 1 through 10 {
+    .advantages__item:nth-child(#{$i}n) {
+        transition-duration: #{$i * 0.15}s;
+    }
+}
+
+.advantages {
+    &__item {
+        transition-property: all;
+        transition-timing-function: linear;
+        opacity: 0;
+
+        &.animated {
+            opacity: 1;
+        }
+    }
+
+    &__pic {
+        transition-duration: 0.8s;
+        transition-timing-function: linear;
+        transition-property: all;
+
+        &--doctor {
+            transform: translateX(30px);
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &--hand {
+            transform: translateY(30px);
+
+            &.animated {
+                transform: translateY(0);
+            }
+        }
+
+        &--crane {
+            transform: translateX(60px);
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &--mobile {
+            transform: translateY(50px);
+
+            &.animated {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__info {
+        .advantages__item--secondary & {
+            transition-property: all;
+            transition-timing-function: linear;
+            opacity: 0;
+            transition-duration: 0.6s;
+
+            &.animated {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@for $i from 1 through 10 {
+    .team__item:nth-child(#{$i}n) {
+        transition-duration: #{$i * 0.1}s;
+    }
+}
+
+.team {
+    &__item {
+        transition-property: all;
+        transition-timing-function: linear;
+        transform: scale(0.9);
+        opacity: 0;
+
+        &.animated {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+.cases {
+    &__images {
+        &-img {
+            transition-duration: 0.6s;
+            transition-property: all;
+            transition-timing-function: linear;
+        }
+
+        &-fish {
+            transform: translateX(-50px);
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &-monitor {
+            transform: translateY(30px);
+
+            &.animated {
+                transform: translateY(0);
+            }
+        }
+
+        &-bycicle {
+            transform: translateX(-50px);
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &-wheel {
+            transform: translateX(-30px);
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &-hammer {
+            transform: translateX(-30px);
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &-pliers {
+            transform: translateX(30px);
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &-gloves {
+            transform: translateX(30px);
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &-helmet {
+            transform: translateY(30px);
+
+            &.animated {
+                transform: translateY(0);
+            }
+        }
+
+        &-table {
+            transform: scale(0.7);
+
+            &.animated {
+                transform: scale(1);
+            }
+            &__01 {
+                transform: scale(0.5);
+
+                &.animated {
+                    transform: scale(1);
+                }
+            }
+
+            &__02 {
+                transform: scale(0.3);
+
+                &.animated {
+                    transform: scale(1);
+                }
+            }
+
+            &__03 {
+                transform: translateY(-20%);
+                position: relative;
+                z-index: 1;
+                margin-right: auto;
+                margin-left: 20px;
+
+                &.animated {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        &-grandma {
+            transform: translateX(60px);
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &-join {
+            transform: translateX(-60px);
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+
+        &-gallery {
+            transform: translateX(60px);
+            position: relative;
+            top: 20px;
+            margin-left: auto;
+
+            &.animated {
+                transform: translateX(0);
+            }
+        }
+    }
+}

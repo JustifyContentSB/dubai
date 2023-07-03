@@ -1,0 +1,103 @@
+@import 'partials';
+
+.header {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &__inner {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 228px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__nav {
+        &-menu {
+            display: flex;
+        }
+    }
+
+    &__language {
+        &-list {
+            display: flex;
+
+            li {
+                &:not(:last-child) {
+                    margin-right: 15px;
+
+                    &::after {
+                        content: '/';
+                        color: #fff;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+
+        &-btn {
+            padding: 10px 0;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: $blue;
+                opacity: 0;
+            }
+
+            &.is-active {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    @include ms(xl) {
+        .header {
+            &__nav {
+                display: none;
+            }
+        }
+    }
+
+    @include ms(md) {
+        &__logo {
+            width: 160px;
+        }
+    }
+
+    @include ms(sm) {
+        &__inner {
+            padding: 18px 10px;
+        }
+
+        &__logo {
+            width: 126px;
+        }
+    }
+}

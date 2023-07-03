@@ -1,0 +1,184 @@
+@import 'partials';
+
+.advantages {
+    color: #fff;
+
+    &__grid {
+        &.grid {
+            grid-gap: 50px 32px;
+        }
+    }
+
+    &__item {
+        min-height: 333px;
+        padding: 31px 26px;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        background: $primary;
+
+        &--secondary {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .advantages {
+                &__about {
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+
+    &__info {
+        position: relative;
+        z-index: 1;
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__about {
+        margin-bottom: 27px;
+    }
+
+    &__num {
+        margin: 0;
+        font-size: 64px;
+        line-height: 100%;
+        font-weight: 700;
+        display: block;
+    }
+
+    &__project {
+        margin: 0;
+        font-size: 24px;
+        line-height: 110%;
+    }
+
+    &__title {
+        max-width: 370px;
+        margin-bottom: 37px;
+        font-size: 30px;
+        line-height: 110%;
+        font-weight: 700;
+    }
+
+    &__images {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__pic {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        &--hand {
+            top: 10px;
+        }
+
+        &--mobile {
+            right: 24px;
+        }
+
+        &--mob {
+            display: none;
+        }
+    }
+
+    img.advantages__pic {
+        position: absolute;
+    }
+
+    @media screen and (max-width: 1600px) {
+        &__grid {
+            &.grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 32px;
+            }
+        }
+    }
+
+    @include ms(xl) {
+        &__grid {
+            &.grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    @include ms(sm) {
+        &__item {
+            min-height: 325px;
+            padding: 20px 10px;
+            border-radius: 0;
+
+            &:first-child {
+                .advantages__title {
+                    max-width: 160px;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__project {
+            font-size: 22px;
+        }
+
+        &__pic {
+            &--desktop {
+                display: none;
+            }
+
+            &--mob {
+                display: block;
+            }
+
+            &--crane {
+                bottom: auto;
+                top: 0;
+            }
+
+            &--mobile {
+                right: -80px;
+            }
+        }
+    }
+}
+
+.section {
+    &--advantages {
+        @include ms(sm) {
+            & {
+                .section {
+                    &__header {
+                        padding: 0 10px;
+                    }
+
+                    &__wrapper {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

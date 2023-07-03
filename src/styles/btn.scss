@@ -1,0 +1,101 @@
+@import 'partials';
+
+.btn {
+    display: inline-block;
+    color: $white;
+    background-color: $primary;
+    border-radius: 36px;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+
+    @include transition(background-color);
+
+    @include hover() {
+        color: $white;
+        background-color: lighten($primary, 2.5%);
+    }
+
+    &--light {
+        padding: 10px 21px;
+        color: $primary;
+        background: $white;
+        box-shadow: 0px 3px 10px rgba(33, 33, 39, 0.15);
+        font-size: 16px;
+
+        @include hover() {
+            color: $white;
+            background: $blue;
+        }
+    }
+
+    &--card {
+        padding: 13px 30px;
+        font-size: 18px;
+    }
+
+    &--wide {
+        padding: 17px 31px;
+        border-radius: 36px;
+        font-size: 18px;
+        color: $dark;
+        font-weight: 700;
+    }
+
+    &--outline {
+        padding: 10px 21px;
+        border: 1px solid $blue;
+        color: $blue;
+        background: transparent;
+        font-size: 16px;
+    }
+
+    &--red {
+        padding: 20px;
+        min-width: 340px;
+        font-size: 18px;
+        border-radius: 36px;
+        background: #ED2D24;
+
+        &:hover,
+        &:focus {
+            background: #ED2D24;
+            opacity: 0.8;
+        }
+    }
+
+    &--arrow {
+        @include icomoon(arrow-down, before) {
+            margin-right: 6px;
+            font-size: 12px;
+        };
+    }
+
+    &__icon {
+        display: none;
+    }
+
+    @include ms(sm) {
+        &--red {
+            min-width: auto;
+            width: 100%;
+        }
+
+        &--icon {
+            padding: 16px;
+            border-radius: 50%;
+
+            .btn {
+                &__text {
+                    display: none;
+                }
+
+                &__icon {
+                    display: block;
+                }
+            }
+        }
+    }
+}
